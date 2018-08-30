@@ -1,0 +1,3 @@
+{
+"/lists/:listId/items/:itemId": "/items/?id=:itemId&listId=:listId"
+}
