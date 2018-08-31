@@ -1,12 +1,47 @@
 {
   "lists": [
     {
+      "id": 1,
+      "name": "X-Mas List",
+      "color": "#ff0000"
+    },
+    {
       "name": "Easter list",
       "color": "#00ff00",
       "id": 2
     }
   ],
   "items": [
+    {
+      "id": 1,
+      "text": "XMAS tree",
+      "isChecked": true,
+      "listId": 1
+    },
+    {
+      "id": 2,
+      "text": "XMAS decorations",
+      "isChecked": false,
+      "listId": 1
+    },
+    {
+      "id": 3,
+      "text": "Pudding",
+      "isChecked": false,
+      "listId": 1
+    },
+    {
+      "id": 4,
+      "text": "Present 458 my mom",
+      "isChecked": true,
+      "listId": 1
+    },
+    {
+      "text": "Candy bar",
+      "isChecked": false,
+      "listId": "1",
+      "id": 5
+    },
     {
       "text": "Easter bunny",
       "isChecked": true,
@@ -18,6 +53,18 @@
       "isChecked": false,
       "listId": "2",
       "id": 7
+    },
+    {
+      "text": "Moisa Roxadfana",
+      "isChecked": false,
+      "listId": 1,
+      "id": 8
+    },
+    {
+      "text": "Razvan",
+      "isChecked": true,
+      "listId": 1,
+      "id": 9
     }
   ]
 }

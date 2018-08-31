@@ -6,11 +6,13 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.2",
     "@fortawesome/free-brands-svg-icons": "^5.2.0",
     "@fortawesome/free-solid-svg-icons": "^5.2.0",
-    "@fortawesome/react-fontawesome": "^0.1.2",
+    "@fortawesome/react-fontawesome": "0.1.2",
     "axios": "^0.18.0",
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
     "react-fontawesome": "^1.6.1",
+    "react-modal": "^3.5.1",
+    "react-modal-bootstrap": "^1.1.1",
     "react-scripts": "1.1.5"
   },
   "scripts": {

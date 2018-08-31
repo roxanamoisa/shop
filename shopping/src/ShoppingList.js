@@ -3,6 +3,7 @@ import {Item} from './Item';
 import ItemList from './ItemList';
 import './bootstrap.min.css';
 import DeleteModal from './DeleteModal';
+import NewModal from './NewModal';
 
 function ShoppingList ({id, name, color, items, onDelete, onEdit, onItemsChanged}) {
 
@@ -14,11 +15,7 @@ function ShoppingList ({id, name, color, items, onDelete, onEdit, onItemsChanged
             </ItemList>
 
             <div>
-                <button type="button" className="btn btn-sm btn-danger" data-toggle="modal" data-target="#exampleModal">
-                    Delete
-                </button>
-
-                <DeleteModal modalId="exampleModal" onOK={() => onDelete(id)}></DeleteModal>
+                <NewModal onModalDelete={ () => {onDelete(id)}  }></NewModal>
                 
                 <a className={'btn btn-sm btn-success'}>Edit</a>
 
