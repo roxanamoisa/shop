@@ -103,6 +103,12 @@ class App extends Component {
       } ));
   }
 
+  changeColorToShoppingList(shoppingListId, shoppingList) {
+
+    axios.patch(`http://localhost:3000/lists/${shoppingListId}`, shoppingList)
+    .then(() => this.getItemsFromServer(shoppingListId));
+  }
+
   renderPopUp(shoppingListId) {
     return (
       <div className="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -145,20 +151,33 @@ class App extends Component {
           }}
           onEdit={ () => {} }
           onItemsChanged={(newItems, hint) => {
-          switch (hint.operation) {
-            case 'delete':
-              this.deleteItemFromServer(shoppingList.id, hint.id);
-              break;
-            case 'add':
-              this.addItemToServer(shoppingList.id);
-              break;
-            case 'changed':
-              this.updateItemOnServer(shoppingList.id, newItems.find( (elem) => hint.id === elem.id));
-              break;
+            switch (hint.operation) {
+              case 'delete':
+                this.deleteItemFromServer(shoppingList.id, hint.id);
+                break;
+              case 'add':
+                this.addItemToServer(shoppingList.id);
+                break;
+              case 'changed':
+                this.updateItemOnServer(shoppingList.id, newItems.find( (elem) => hint.id === elem.id));
+                break;
 
+            }
+          }}
+          onColorChange={(id, listColor, name) =>
+            {this.changeColorToShoppingList(id, 
+              {
+                "id": id,
+                "name": name,
+                "color": listColor 
+              }
+            )
+            }
           }
-        }}>
+        
+        >
         </ShoppingList>
+
         } )}
 
         

@@ -9,6 +9,7 @@
     "@fortawesome/react-fontawesome": "0.1.2",
     "axios": "^0.18.0",
     "react": "^15.4.2",
+    "react-color": "^2.14.1",
     "react-dom": "^15.4.2",
     "react-fontawesome": "^1.6.1",
     "react-modal": "^3.5.1",
