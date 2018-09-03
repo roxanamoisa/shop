@@ -25,6 +25,9 @@ class App extends Component {
     this.getShoppingListsFromServer();    
   }
 
+  /**
+   * 
+   */
   getShoppingListsFromServer() {
     axios.get(`http://localhost:3000/lists`)
     .then((response) => {
@@ -103,10 +106,10 @@ class App extends Component {
       } ));
   }
 
-  changeColorToShoppingList(shoppingListId, shoppingList) {
+  changeColorToShoppingList(newSL) {
 
-    axios.patch(`http://localhost:3000/lists/${shoppingListId}`, shoppingList)
-    .then(() => this.getItemsFromServer(shoppingListId));
+    axios.patch(`http://localhost:3000/lists/${newSL.id}`, newSL)
+    .then(() => this.getItemsFromServer(newSL.id));
   }
 
   renderPopUp(shoppingListId) {
@@ -164,16 +167,7 @@ class App extends Component {
 
             }
           }}
-          onColorChange={(id, listColor, name) =>
-            {this.changeColorToShoppingList(id, 
-              {
-                "id": id,
-                "name": name,
-                "color": listColor 
-              }
-            )
-            }
-          }
+          onColorChange={ (newSL) => this.changeColorToShoppingList(newSL)  }
         
         >
         </ShoppingList>

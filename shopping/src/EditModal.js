@@ -4,6 +4,7 @@ import { SketchPicker } from 'react-color';
 
 class EditModal extends Component {
     tempColor = '#FF0000';
+    newSL = this.props.shoppingList;
 
     state = {
         isOpen: false
@@ -54,10 +55,13 @@ class EditModal extends Component {
                         </div>
 
                         <div>
-                        <SketchPicker color={ this.tempColor } 
+                        <SketchPicker color={ this.newSL.color } 
                         onChangeComplete={(newColor) => {
-                            this.tempColor = newColor;
-                            this.props.changeToColor(newColor.hex);
+                            //this.tempColor = newColor;
+                            this.newSL.color = newColor;
+
+                            //this.props.changeToColor(newColor.hex);
+                            this.props.onChangeSL(this.newSL);
                         }}
                         />
                         </div>

@@ -18,7 +18,18 @@ function ShoppingList ({id, name, color, items, onDelete, onEdit, onItemsChanged
             <div>
                 <NewModal onModalDelete={ () => {onDelete(id)}  }></NewModal>
                 
-                <EditModal changeToColor={ (listColor) => {onColorChange(id, listColor, name)}  }></EditModal>
+                <EditModal 
+                    shoppingList=
+                        { 
+                            {
+                            "id": id,
+                            "name": name,
+                            "color": color
+                            }
+                        }
+                    onChangeSL={ (newSL) => {onColorChange(newSL)}  }
+                >
+                </EditModal>
 
             </div>
 
