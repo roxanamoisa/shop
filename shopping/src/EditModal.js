@@ -22,6 +22,8 @@ class EditModal extends Component {
         });
     };
 
+    
+
     render() {
 
         
@@ -58,7 +60,7 @@ class EditModal extends Component {
                         <SketchPicker color={ this.newSL.color } 
                         onChangeComplete={(newColor) => {
                             //this.tempColor = newColor;
-                            this.newSL.color = newColor;
+                            this.newSL.color = newColor.hex;
 
                             //this.props.changeToColor(newColor.hex);
                             this.props.onChangeSL(this.newSL);

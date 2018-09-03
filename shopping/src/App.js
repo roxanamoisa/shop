@@ -60,6 +60,8 @@ class App extends Component {
       });
   }
 
+  
+
   deleteItemFromServer(listId, itemId) {
     axios.delete(`http://localhost:3000/items/${itemId}`)
       .then(() => this.getItemsFromServer(listId));
@@ -109,7 +111,7 @@ class App extends Component {
   changeColorToShoppingList(newSL) {
 
     axios.patch(`http://localhost:3000/lists/${newSL.id}`, newSL)
-    .then(() => this.getItemsFromServer(newSL.id));
+    .then(() => this.getShoppingListsFromServer());
   }
 
   renderPopUp(shoppingListId) {
@@ -167,7 +169,11 @@ class App extends Component {
 
             }
           }}
-          onColorChange={ (newSL) => this.changeColorToShoppingList(newSL)  }
+          onColorChange={ (newSL) => 
+            {
+              this.changeColorToShoppingList(newSL); 
+            }
+          }
         
         >
         </ShoppingList>
