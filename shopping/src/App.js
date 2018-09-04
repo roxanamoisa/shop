@@ -128,7 +128,7 @@ class App extends Component {
       } ));
   }
 
-  changeColorToShoppingList(newSL) {
+  changePropToShoppingList(newSL) {
 
     axios.patch(`http://localhost:3000/lists/${newSL.id}`, newSL)
     .then(() => this.getOneListFromServer(newSL.id));
@@ -189,9 +189,9 @@ class App extends Component {
 
             }
           }}
-          onColorChange={ (newSL) => 
+          onPropChange={ (newSL) => 
             {
-              this.changeColorToShoppingList(newSL); 
+              this.changePropToShoppingList(newSL);
             }
           }
         

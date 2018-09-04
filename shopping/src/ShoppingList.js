@@ -6,7 +6,7 @@ import DeleteModal from './DeleteModal';
 import NewModal from './NewModal';
 import EditModal from './EditModal';
 
-function ShoppingList ({id, name, color, items, onDelete, onEdit, onItemsChanged, onColorChange}) {
+function ShoppingList ({id, name, color, items, onDelete, onEdit, onItemsChanged, onPropChange}) {
 
     return (
         <div className="shopping-list" style={{backgroundColor: color}}>
@@ -27,7 +27,7 @@ function ShoppingList ({id, name, color, items, onDelete, onEdit, onItemsChanged
                             "color": color
                             }
                         }
-                    onChangeSL={ (newSL) => {onColorChange(newSL)}  }
+                    onChangeSL={ (newSL) => {onPropChange(newSL)}  }
                 >
                 </EditModal>
 

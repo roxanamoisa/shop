@@ -71,7 +71,16 @@ class EditModal extends Component {
                         <span>
                             New name:
 
-                            <input type="text" defaultValue={this.props.shoppingList.name}/>
+                            <input
+                            type="text"
+                            defaultValue={this.props.shoppingList.name}
+                            onBlur={ (event) => 
+                                {
+                                    this.newSL.name = event.target.value;
+                                    this.props.onChangeSL(this.newSL);
+                                }
+                            }
+                            />
                         </span>
                     </div>
                 </Modal>

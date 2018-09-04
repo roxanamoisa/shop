@@ -2,12 +2,12 @@
   "lists": [
     {
       "id": 1,
-      "name": "X-Mas List",
-      "color": "#ff0000"
+      "name": "XMAS",
+      "color": "#1f6656"
     },
     {
-      "name": "Easter list",
-      "color": "#86cf3a",
+      "name": "roxana",
+      "color": "#819e60",
       "id": 2
     }
   ],
