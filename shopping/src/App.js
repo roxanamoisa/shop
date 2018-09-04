@@ -26,7 +26,7 @@ class App extends Component {
   }
 
   /**
-   * 
+   * gets all the shopping lists from the server
    */
   getShoppingListsFromServer() {
     axios.get(`http://localhost:3000/lists`)
@@ -36,6 +36,28 @@ class App extends Component {
       });
       response.data.forEach(shoppingList => {
         this.getItemsFromServer(shoppingList.id);
+      });
+    })
+  }
+
+  getOneListFromServer(listId) {
+
+    axios.get(`http://localhost:3000/lists/${listId}`)
+    .then( (response) => {
+
+      this.setState( (oldState) => {
+
+        return {
+          shoppingLists: oldState.shoppingLists
+          .map(shoppingList => {
+            if (shoppingList.id === listId) {
+              return Object.assign({}, shoppingList, response.data);
+            }
+            else {
+              return shoppingList;
+            }
+          })
+        };
       });
     })
   }
@@ -59,8 +81,6 @@ class App extends Component {
         }); 
       });
   }
-
-  
 
   deleteItemFromServer(listId, itemId) {
     axios.delete(`http://localhost:3000/items/${itemId}`)
@@ -111,7 +131,7 @@ class App extends Component {
   changeColorToShoppingList(newSL) {
 
     axios.patch(`http://localhost:3000/lists/${newSL.id}`, newSL)
-    .then(() => this.getShoppingListsFromServer());
+    .then(() => this.getOneListFromServer(newSL.id));
   }
 
   renderPopUp(shoppingListId) {

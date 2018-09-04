@@ -44,7 +44,7 @@ class EditModal extends Component {
                         </div>
 
                         <div  className="modal-body">
-                            <p> Select a new color for the shopping list</p>
+                            <p> Choose a color and a name for the shopping list</p>
                         </div>
 
                         <div className="modal-footer">
@@ -67,6 +67,12 @@ class EditModal extends Component {
                         }}
                         />
                         </div>
+
+                        <span>
+                            New name:
+
+                            <input type="text" defaultValue={this.props.shoppingList.name}/>
+                        </span>
                     </div>
                 </Modal>
             </div>
