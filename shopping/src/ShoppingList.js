@@ -12,7 +12,7 @@ function ShoppingList ({id, name, color, items, onDelete, onEdit, onItemsChanged
         <div className="shopping-list" style={{backgroundColor: color}}>
             <div className="shopping-list-name">{name}</div>
 
-            <ItemList items={items} onItemsChanged={onItemsChanged} isReadOnly={false}>
+            <ItemList items={items} onItemsChanged={onItemsChanged} isReadOnly={true}>
             </ItemList>
 
             <div>
@@ -28,6 +28,12 @@ function ShoppingList ({id, name, color, items, onDelete, onEdit, onItemsChanged
                             }
                         }
                     onChangeSL={ (newSL) => {onPropChange(newSL)}  }
+
+                    items={items}
+
+                    onItemsChanged={onItemsChanged}
+
+                    
                 >
                 </EditModal>
 

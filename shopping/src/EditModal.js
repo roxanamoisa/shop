@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Modal from 'react-modal';
 import { SketchPicker } from 'react-color';
+import ItemList from './ItemList';
 
 class EditModal extends Component {
     tempColor = '#FF0000';
@@ -66,6 +67,17 @@ class EditModal extends Component {
                             this.props.onChangeSL(this.newSL);
                         }}
                         />
+                        </div>
+
+                        <div>
+                            <ItemList
+                                items={this.props.items}
+
+                                onItemsChanged={this.props.onItemsChanged}
+
+                                isReadOnly={false}
+                                >
+                            </ItemList>
                         </div>
 
                         <span>

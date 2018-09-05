@@ -2,12 +2,12 @@
   "lists": [
     {
       "id": 1,
-      "name": "XMAS",
-      "color": "#1f6656"
+      "name": "aaa",
+      "color": "#7e474e"
     },
     {
-      "name": "roxana",
-      "color": "#819e60",
+      "name": "gsdgsh",
+      "color": "#5d7742",
       "id": 2
     }
   ],
@@ -21,13 +21,13 @@
     {
       "id": 2,
       "text": "XMAS decorations",
-      "isChecked": false,
+      "isChecked": true,
       "listId": 1
     },
     {
       "id": 3,
       "text": "Pudding",
-      "isChecked": false,
+      "isChecked": true,
       "listId": 1
     },
     {
@@ -37,7 +37,7 @@
       "listId": 1
     },
     {
-      "text": "Candy bar",
+      "text": "Candy bar 1234",
       "isChecked": false,
       "listId": "1",
       "id": 5
@@ -49,7 +49,7 @@
       "id": 6
     },
     {
-      "text": "Easter egg 23",
+      "text": "Easter egg",
       "isChecked": false,
       "listId": "2",
       "id": 7
@@ -62,7 +62,7 @@
     },
     {
       "text": "Razvan",
-      "isChecked": true,
+      "isChecked": false,
       "listId": 1,
       "id": 9
     }
