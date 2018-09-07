@@ -31,7 +31,9 @@ class EditModal extends Component {
         
         return (
             <div>
-                <button type="button" className="btn btn-sm btn-success" onClick={this.openModal}>Edit</button>
+                <div className="edit-button">
+                    <button type="button" className="btn btn-sm btn-success" onClick={this.openModal}>Edit</button>
+                </div>
 
                 <Modal
                     className="Modal__Bootstrap modal-dialog"
