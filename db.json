@@ -44,13 +44,13 @@
     },
     {
       "text": "Easter bunny 2",
-      "isChecked": true,
+      "isChecked": false,
       "listId": "2",
       "id": 6
     },
     {
       "text": "Easter egg",
-      "isChecked": false,
+      "isChecked": true,
       "listId": "2",
       "id": 7
     },

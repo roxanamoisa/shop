@@ -27,7 +27,11 @@ import {
 
 function renderText(item, onItemChanged, isReadOnly) {
 	if (isReadOnly) {
-		return <span className="item-text">{item.text}</span>
+		//return <span className="item-text">{item.text}</span>
+		if(item.isChecked)
+			return <span className="item-text"><strike>{item.text}</strike></span>
+		else
+			return <span className="item-text">{item.text}</span>
 	} else {
 		return <input type="text" defaultValue={item.text} 
 					onBlur={(event) => {onItemChanged({id: item.id, text: event.target.value, isChecked: item.isChecked}) }}/>	}

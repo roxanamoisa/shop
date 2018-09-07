@@ -72,8 +72,8 @@ class EditModal extends Component {
                             />
                             </div>
 
-                            <div>
-                                <ItemList
+                            <div className="item-list-edit-modal">
+                                <ItemList 
                                     items={this.props.items}
 
                                     onItemsChanged={this.props.onItemsChanged}
