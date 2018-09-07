@@ -41,8 +41,8 @@ class EditModal extends Component {
                     <div className="modal-content">
                 
                         <div className="modal-header">
-                            <div onClick={this.hideModal}/>
                             <div>Choose a color and a name for the shopping list</div>
+                            <div className="X-button" onClick={this.hideModal}>X</div>
                         </div>
 
                         <div  className="modal-body">
